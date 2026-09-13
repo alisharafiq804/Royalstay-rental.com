@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="RoyalStay Rentals — premium flats, girls hostel rooms and royal houses." />
+  <title>RoyalStay Rentals | Premium Stays</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="cursor-dot"></div><div class="cursor-ring"></div>
+
+  <!-- SIGN UP / LOGIN GATE -->
+  <section id="authGate" class="auth-gate">
+    <div class="auth-visual">
+      <div class="auth-overlay"></div>
+      <div class="auth-copy">
+        <span class="eyebrow">ROYALSTAY RENTALS</span>
+        <h1>Stay somewhere<br><em>extraordinary.</em></h1>
+        <p>Premium city flats, comfortable girls hostel rooms and elegant royal houses — designed for a better stay.</p>
+        <div class="auth-badges"><span>✦ Furnished</span><span>✦ 24/7 Power</span><span>✦ Filtered Water</span></div>
+      </div>
+    </div>
+    <div class="auth-panel">
+      <div class="brand-mark"><span>RS</span><div><strong>RoyalStay</strong><small>RENTALS</small></div></div>
+      <div class="auth-tabs"><button class="active" data-auth-tab="signup">Create account</button><button data-auth-tab="login">Sign in</button></div>
+      <form id="signupForm" class="auth-form active-form">
+        <h2>Welcome to RoyalStay</h2><p class="muted">Create your account to explore premium stays.</p>
+        <label>Full name<input id="signupName" required type="text" placeholder="Your full name"></label>
+        <label>Email address<input id="signupEmail" required type="email" placeholder="you@example.com"></label>
+        <label>Password<input id="signupPassword" required minlength="6" type="password" placeholder="At least 6 characters"></label>
+        <button class="primary full" type="submit">Create account <span>→</span></button>
+        <p class="form-note">By continuing, you agree to our simple demo booking terms.</p>
+      </form>
+      <form id="loginForm" class="auth-form">
+        <h2>Welcome back</h2><p class="muted">Sign in to continue to your RoyalStay dashboard.</p>
+        <label>Email address<input id="loginEmail" required type="email" placeholder="you@example.com"></label>
+        <label>Password<input id="loginPassword" required type="password" placeholder="Your password"></label>
+        <button class="primary full" type="submit">Sign in <span>→</span></button>
+      </form>
+      <p id="authMessage" class="auth-message"></p>
+    </div>
+  </section>
+
+  <!-- MAIN WEBSITE -->
+  <div id="site" class="site hidden">
+    <header class="header" id="top">
+      <a class="logo" href="#home"><span>RS</span><div><b>RoyalStay</b><small>RENTALS</small></div></a>
+      <nav class="nav" id="nav">
+        <a href="#home">Home</a><a href="#properties">Properties</a><a href="#hostel">Girls Hostel</a><a href="#palaces">Royal Houses</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a>
+      </nav>
+      <div class="header-actions"><button class="icon-btn" id="themeToggle" title="Toggle theme">☼</button><button class="primary small" data-book="">Book Now</button><button class="menu-btn" id="menuBtn">☰</button></div>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-bg"></div><div class="hero-glow"></div>
+        <div class="hero-content reveal">
+          <span class="eyebrow">PREMIUM RENTAL COLLECTION</span>
+          <h1>Find your perfect<br><em>royal stay.</em></h1>
+          <p>Beautifully furnished flats, secure girls hostel rooms and grand houses — all in one trusted place.</p>
+          <div class="hero-buttons"><a class="primary" href="#properties">Explore properties <span>↗</span></a><a class="ghost" href="#contact">Talk to us</a></div>
+          <div class="hero-stats"><div><b>3</b><span>Property types</span></div><div><b>24/7</b><span>Essential services</span></div><div><b>100%</b><span>Furnished options</span></div></div>
+        </div>
+        <div class="hero-card reveal delay-2"><div class="mini-label">Featured stay</div><img src="assets/royal house a.jpg" alt="Royal house"><div class="hero-card-info"><div><b>Royal House</b><span>Luxury family living</span></div><strong>From PKR 8,500/day</strong></div></div>
+      </section>
+
+      <section class="section intro" id="properties">
+        <div class="section-heading reveal"><div><span class="eyebrow">OUR COLLECTION</span><h2>Choose your <em>perfect space.</em></h2></div><p>Whether you're staying for a day, a week or a month, RoyalStay brings comfort, style and practical essentials together.</p></div>
+        <div class="property-grid">
+          <article class="property-card reveal" data-category="flats"><div class="property-image"><img src="assets/flat building.jpg" alt="City flats building"><span class="tag">CITY FLATS</span></div><div class="property-body"><div><h3>Royal City Flats</h3><p>4 floors · 3 flats per floor · Cafeteria</p></div><div class="price"><small>from</small><b>PKR 1,000</b><small>/day</small></div><button class="text-btn" data-book="Royal City Flat">View & book →</button></div></article>
+          <article class="property-card reveal delay-1" data-category="hostel"><div class="property-image"><img src="assets/girls hostel.jpg" alt="Girls hostel exterior"><span class="tag">GIRLS HOSTEL</span></div><div class="property-body"><div><h3>Royal Girls Hostel</h3><p>1 & 2 seater · Attached washroom · Secure</p></div><div class="price"><small>from</small><b>PKR 333</b><small>/day</small></div><button class="text-btn" data-book="Royal Girls Hostel">View & book →</button></div></article>
+          <article class="property-card reveal delay-2" data-category="palaces"><div class="property-image"><img src="assets/royal house.png" alt="Royal house exterior"><span class="tag">ROYAL HOUSES</span></div><div class="property-body"><div><h3>Royal House Collection</h3><p>Pool · Garden · Parking · 5 guest rooms</p></div><div class="price"><small>from</small><b>PKR 8,500</b><small>/day</small></div><button class="text-btn" data-book="Royal House">View & book →</button></div></article>
+        </div>
+      </section>
+
+      <section class="dark-section" id="hostel">
+        <div class="section split">
+          <div class="split-copy reveal"><span class="eyebrow">02 · GIRLS HOSTEL</span><h2>Comfort that feels<br><em>like home.</em></h2><p>A thoughtfully designed four-floor residence with secure rooms, practical study spaces and essential services for a comfortable long-term stay.</p><div class="feature-list"><span>✓ 24-hour electricity</span><span>✓ Filtered drinking water</span><span>✓ AC / cooling options</span><span>✓ Attached washrooms</span><span>✓ Study table & wardrobe</span><span>✓ Ceiling lights & fan</span></div><button class="primary" data-book="Royal Girls Hostel">Reserve a room <span>→</span></button></div>
+          <div class="hostel-showcase reveal delay-1"><div class="building-frame"><img src="assets/hostel building.jpg" alt="Girls hostel building"><div class="image-caption"><b>Royal Girls Hostel</b><span>10-acre campus · 4 floors</span></div></div><div class="room-strip"><div><img src="assets/hostel room view.jpg" alt="Hostel room"><span>Room interior</span></div><div><img src="assets/flat room idea.jpg" alt="Furnished room"><span>Study & living</span></div></div></div>
+        </div>
+        <div class="section room-section"><div class="section-heading light reveal"><div><span class="eyebrow">ROOM OPTIONS</span><h2>1-seater & <em>2-seater.</em></h2></div><p>Simple, furnished and ready for move-in. Prices are easy to understand with day, week and month options.</p></div><div class="room-grid"><article class="room-card reveal"><div class="room-img"><img src="assets/hostel room view.jpg" alt="Single room"><span>1 SEATER</span></div><h3>Premium Single</h3><p>Private furnished room with attached washroom, study table, wardrobe, AC option and filtered water.</p><div class="room-price"><b>PKR 10,000</b><span>/ month</span></div><div class="price-row"><span>Week <b>2,500</b></span><span>Day <b>333</b></span></div><button class="outline full" data-book="Premium Single Hostel Room">Book room</button></article><article class="room-card featured-room reveal delay-1"><div class="room-img"><img src="assets/flat room.jpg" alt="Two seater room"><span>2 SEATER</span></div><h3>Royal Twin</h3><p>Two comfortable beds, individual storage, study area, attached washroom and all core hostel services.</p><div class="room-price"><b>PKR 7,500</b><span>/ person / month</span></div><div class="price-row"><span>Week <b>1,875</b></span><span>Day <b>250</b></span></div><button class="primary full" data-book="Royal Twin Hostel Room">Book room</button></article></div></div>
+      </section>
+
+      <section class="section flats-section" id="flats">
+        <div class="section-heading reveal"><div><span class="eyebrow">01 · CITY FLATS</span><h2>Modern city living,<br><em>beautifully furnished.</em></h2></div><p>White marble and glass exterior styling meets warm, fully furnished interiors. Four floors, three flats per floor and a ground-floor cafeteria.</p></div>
+        <div class="flat-detail"><div class="flat-gallery reveal"><img class="main-flat-img" src="assets/flat building.jpg" alt="City flats building"><div class="thumbs"><button class="active"><img src="assets/flat building.jpg" alt="Exterior"></button><button><img src="assets/flat room.jpg" alt="Room"></button><button><img src="assets/flat room idea.jpg" alt="Interior"></button></div></div><div class="flat-info reveal delay-1"><span class="tag dark-tag">FULLY FURNISHED</span><h3>Royal City Flat</h3><p>Designed for people who want privacy, convenience and a polished space without the hassle of furnishing it themselves.</p><div class="amenities"><span>🛋 Furniture</span><span>📺 Smart TV</span><span>🛏 Bed</span><span>🚿 Washroom</span><span>💧 Filtered water</span><span>⚡ 24/7 electricity</span><span>❄ AC option</span><span>💡 Ceiling lights</span></div><div class="rent-box"><div><small>MONTHLY</small><b>PKR 30,000</b></div><div><small>WEEKLY</small><b>PKR 7,500</b></div><div><small>DAILY</small><b>PKR 1,000</b></div></div><button class="primary full" data-book="Royal City Flat">Book this flat <span>→</span></button></div></div>
+      </section>
+
+      <section class="dark-section palace-section" id="palaces">
+        <div class="section-heading light reveal"><div><span class="eyebrow">03 · ROYAL HOUSES</span><h2>A home with a little<br><em>more grandeur.</em></h2></div><p>Our royal house collection is ideal for families, events and guests who want space, privacy and a memorable setting.</p></div>
+        <div class="palace-grid">
+          <article class="palace-card reveal"><img src="assets/royal house a.jpg" alt="Royal house"><div class="palace-overlay"><span>HOUSE I</span><h3>Royal Maroon Estate</h3><p>Pool · Garden · Parking · 5 guest rooms</p><strong>PKR 8,500 / day</strong><button class="ghost light-ghost" data-book="Royal Maroon Estate">Book this house</button></div></article>
+          <article class="palace-card reveal delay-1"><img src="assets/royal house.png" alt="Luxury royal house"><div class="palace-overlay"><span>HOUSE II</span><h3>Golden Crown Villa</h3><p>Pool · Lounge · Garden · Family suites</p><strong>PKR 12,000 / day</strong><button class="ghost light-ghost" data-book="Golden Crown Villa">Book this house</button></div></article>
+          <article class="palace-card reveal delay-2"><img src="assets/royal house a.jpg" alt="Luxury estate"><div class="palace-overlay"><span>HOUSE III</span><h3>Royal Garden Residence</h3><p>Large lounge · Parking · Private garden</p><strong>PKR 15,000 / day</strong><button class="ghost light-ghost" data-book="Royal Garden Residence">Book this house</button></div></article>
+        </div>
+      </section>
+
+      <section class="section gallery-section" id="gallery">
+        <div class="section-heading reveal"><div><span class="eyebrow">VISUAL TOUR</span><h2>See the <em>RoyalStay</em> difference.</h2></div><p>Explore the reference interiors and exteriors across our rental collection.</p></div>
+        <div class="filter-bar reveal"><button class="active" data-filter="all">All</button><button data-filter="flats">Flats</button><button data-filter="hostel">Hostel</button><button data-filter="palaces">Royal Houses</button></div>
+        <div class="gallery-grid">
+          <figure class="gallery-item tall reveal" data-type="flats"><img src="assets/flat building.jpg" alt="Flat exterior"><figcaption>City Flats · Exterior</figcaption></figure>
+          <figure class="gallery-item reveal delay-1" data-type="flats"><img src="assets/flat room.jpg" alt="Flat room"><figcaption>City Flats · Furnished Room</figcaption></figure>
+          <figure class="gallery-item reveal delay-2" data-type="hostel"><img src="assets/hostel building.jpg" alt="Hostel exterior"><figcaption>Girls Hostel · Exterior</figcaption></figure>
+          <figure class="gallery-item wide reveal" data-type="hostel"><img src="assets/hostel room view.jpg" alt="Hostel room"><figcaption>Girls Hostel · Room Interior</figcaption></figure>
+          <figure class="gallery-item reveal" data-type="palaces"><img src="assets/royal house.png" alt="Royal house"><figcaption>Royal House · Exterior</figcaption></figure>
+          <figure class="gallery-item reveal delay-1" data-type="palaces"><img src="assets/royal house a.jpg" alt="Royal estate"><figcaption>Royal House · Estate</figcaption></figure>
+          <figure class="gallery-item reveal delay-2" data-type="flats"><img src="assets/flat room idea.jpg" alt="Interior idea"><figcaption>Interior · Living Space</figcaption></figure>
+          <figure class="gallery-item reveal" data-type="hostel"><img src="assets/girls hostel.jpg" alt="Hostel exterior"><figcaption>Girls Hostel · Front View</figcaption></figure>
+        </div>
+      </section>
+
+      <section class="cta-section"><div class="cta-inner reveal"><span class="eyebrow">READY WHEN YOU ARE</span><h2>Your next stay<br><em>starts here.</em></h2><p>Tell us what you need and we'll help you choose the right RoyalStay property.</p><button class="primary" data-book="General Booking">Start a booking <span>→</span></button></div></section>
+
+      <section class="section contact-section" id="contact"><div class="contact-grid"><div class="reveal"><span class="eyebrow">CONTACT</span><h2>Let's plan your<br><em>stay.</em></h2><p>For bookings, availability and property details, contact RoyalStay Rentals directly.</p><div class="contact-lines"><a href="tel:03096453102"><small>PHONE</small><b>0309 6453102</b></a><a href="https://wa.me/923096453101" target="_blank"><small>WHATSAPP</small><b>0309 6453101</b></a><a href="mailto:alisharafiq440@gmail.com"><small>EMAIL</small><b>alisharafiq440@gmail.com</b></a></div></div><div class="map-card reveal delay-1"><div class="map-pattern"></div><div class="map-content"><span>ROYALSTAY LOCATION</span><h3>Visit or contact us<br>for directions.</h3><a class="primary" target="_blank" href="https://maps.app.goo.gl/ChF1VPJ8f3y4DQcM9?g_st=ac">Open in Google Maps ↗</a></div></div></div></section>
+    </main>
+
+    <footer><div class="footer-brand"><div class="brand-mark"><span>RS</span><div><strong>RoyalStay</strong><small>RENTALS</small></div></div><p>Premium spaces. Practical comfort. A stay worth remembering.</p></div><div class="footer-links"><a href="#properties">Properties</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a><button id="logoutBtn">Sign out</button></div><div class="footer-bottom"><span>© 2026 RoyalStay Rentals</span><span>Designed for premium living</span></div></footer>
+  </div>
+
+  <!-- BOOKING MODAL -->
+  <div class="modal" id="bookingModal"><div class="modal-backdrop"></div><div class="modal-box"><button class="close" id="closeModal">×</button><span class="eyebrow">BOOK YOUR STAY</span><h2>Reserve your <em>space.</em></h2><p class="muted">Send your details and we'll confirm availability.</p><form id="bookingForm" class="booking-form"><label>Full name<input id="bookName" required type="text"></label><label>CNIC / ID number<input id="bookCnic" required type="text" placeholder="Your identification number"></label><label>Property<select id="bookProperty" required><option value="">Choose a property</option><option>Royal City Flat</option><option>Royal Girls Hostel</option><option>Premium Single Hostel Room</option><option>Royal Twin Hostel Room</option><option>Royal Maroon Estate</option><option>Golden Crown Villa</option><option>Royal Garden Residence</option><option>General Booking</option></select></label><div class="two-cols"><label>Check-in<input id="bookDate" required type="date"></label><label>Duration<select id="bookDuration"><option>1 Day</option><option>1 Week</option><option>1 Month</option></select></label></div><label>Message<textarea id="bookMessage" rows="3" placeholder="Any special requirements?"></textarea></label><button class="primary full" type="submit">Send booking request <span>→</span></button></form><div id="bookingSuccess" class="success-box hidden"><div>✓</div><h3>Request received</h3><p>Thank you. RoyalStay Rentals will contact you to confirm availability.</p><button class="outline" id="doneBooking">Done</button></div></div></div>
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
